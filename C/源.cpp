@@ -11,12 +11,19 @@ int max(int a, int b)
 	else m = b;
 	return(m);
 }
+int sum()
+{
+	int a, b, c;
+	scanf("%d%d%d", &a, &b, &c);// ‰»Î
+	printf("%d+%d+%d=%d\n", a, b, c,a+b+c);
+}
 int main()
 {
-	printf("Hello world.\n");
+	//printf("Hello world.\n");
 	int a = 1, b = 2;
 	printf("%d",a+b);
 	int c = max(a, b);
 	printf("%d", c);
+	getchar();
 	getchar();
 }
