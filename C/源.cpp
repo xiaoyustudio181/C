@@ -1,26 +1,4 @@
 /*
-C 语言是一种通用的、面向过程式的计算机程序设计语言。
-C 语言是一种广泛使用的计算机语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。
-C 语言是一种通用的高级语言，最初是由丹尼斯·里奇在贝尔实验室为开发 UNIX 操作系统而设计的。
-C 语言最开始是于 1972 年在 DEC PDP-11 计算机上被首次实现。
-UNIX 操作系统，C编译器，和几乎所有的 UNIX 应用程序都是用 C 语言编写的。
-由于各种原因，C 语言现在已经成为一种广泛使用的专业语言。
-C 语言是以 B 语言为基础的，B 语言大概是在 1970 年被引进的。
-目前，C 语言是最广泛使用的系统程序设计语言。
-大多数先进的软件都是使用 C 语言实现的。
-当今最流行的 Linux 操作系统和 RDBMS（Relational Database Management System：关系数据库管理系统） MySQL 都是使用 C 语言编写的。
-C 语言特点：易于学习。结构化语言。它产生高效率的程序。它可以处理底层的活动。它可以在多种计算机平台上编译。
-C 语言最初是用于系统开发工作，特别是组成操作系统的程序。
-C11（也被称为C1X）指ISO标准ISO/IEC 9899:2011，是当前最新的C语言标准。在它之前的C语言标准为C99。
-由于 C 语言所产生的代码运行速度与汇编语言编写的代码运行速度几乎一样，所以采用 C 语言作为系统开发语言。下面列举几个使用 C 的实例：操作系统，语言编译器，汇编器，文本编辑器，打印机，网络驱动器，现代程序，数据库，语言解释器，实体工具。
-一个 C 语言程序，可以是 3 行，也可以是数百万行，它可以写在一个或多个扩展名为 ".c" 的文本文件中，例如，hello.c。您可以使用 "vi"、"vim" 或任何其他文本编辑器来编写您的 C 语言程序。
-
-Visual Studio 2013创建C语言项目的步骤：
-新建项目 -> Visual C++ -> Win32控制台应用程序 ->
-下一步 -> “应用程序类型”选择“控制台应用程序” -> 附加选项选择“空项目” ->
-右击项目文件夹中的“源文件” -> 添加 -> 新建项 -> C++文件(.cpp)
-最后直接在“源.cpp”文件编辑C语言程序。
-
 C语言的程序构成方式：
 １）c语言程序由函数构成，每个函数可以实现一个或多个功能。
 ２）一个正规程序可以有多个函数，但是有且只有一个主函数。
@@ -31,6 +9,7 @@ C语言的程序构成方式：
 #include 是一个预处理命令，用来引入头文件
 stdio: standard input and output */
 #include <stdio.h>
+#include <float.h>
 //==========================================================
 int max(int a, int b)
 {
@@ -47,15 +26,27 @@ int sum(int a,int b)
 //所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 int main()
 {
-	//printf("Hello world.\n");
+	/*printf("Hello world.\n");
 	int a = 1, b = 2;
 	printf("a=%d,b=%d \n", a, b);
 	printf("a+b=%d \n",a + b);
 	int c = max(a, b);
-	printf("max(a,b)=%d \n", c);
-	int d, e;
+	printf("max(a,b)=%d \n", c);*/
+
+	/*int d, e;
 	scanf("%d%d",&d,&e);
-	printf("d=%d,e=%d \n", d, e);
+	printf("d=%d,e=%d \n", d, e);*/
+
+	printf("char 类型数据的存储大小 : %lu \n", sizeof(char));
+	printf("int 类型数据的存储大小 : %lu \n", sizeof(int));
+	printf("float 类型数据的存储大小 : %lu \n", sizeof(float));
+	printf("double 类型数据的存储大小 : %lu \n\n", sizeof(double));
+
+	printf("float 存储最大字节数 : %lu \n", sizeof(float));
+	printf("float 最小值: %E\n", FLT_MIN);
+	printf("float 最大值: %E\n", FLT_MAX);
+	printf("精度值: %d\n", FLT_DIG);
+
 	getchar();
 	getchar();
 	return 0;//语句用于表示退出程序。
