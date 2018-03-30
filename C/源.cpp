@@ -24,6 +24,7 @@ int sum(int a,int b)
 }
 //==========================================================
 //所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
+#define MYPAI 3.1415//常量
 int main()
 {
 	/*printf("Hello world.\n");
@@ -31,13 +32,12 @@ int main()
 	printf("a=%d,b=%d \n", a, b);
 	printf("a+b=%d \n",a + b);
 	int c = max(a, b);
-	printf("max(a,b)=%d \n", c);*/
+	printf("max(a,b)=%d \n", c);
 
-	/*int d, e;
+	int d, e;
 	scanf("%d%d",&d,&e);
 	printf("d=%d,e=%d \n", d, e);*/
-
-	printf("char 类型数据的存储大小 : %lu \n", sizeof(char));
+	/*printf("char 类型数据的存储大小 : %lu \n", sizeof(char));
 	printf("int 类型数据的存储大小 : %lu \n", sizeof(int));
 	printf("float 类型数据的存储大小 : %lu \n", sizeof(float));
 	printf("double 类型数据的存储大小 : %lu \n\n", sizeof(double));
@@ -45,8 +45,10 @@ int main()
 	printf("float 存储最大字节数 : %lu \n", sizeof(float));
 	printf("float 最小值: %E\n", FLT_MIN);
 	printf("float 最大值: %E\n", FLT_MAX);
-	printf("精度值: %d\n", FLT_DIG);
-
+	printf("精度值: %d\n", FLT_DIG);*/
+	const float MYPAI2 = 3.141;
+	printf("MYPAI=%f \n", MYPAI);
+	printf("MYPAI2=%f", MYPAI2);
 	getchar();
 	getchar();
 	return 0;//语句用于表示退出程序。
