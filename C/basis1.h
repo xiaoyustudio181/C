@@ -1,3 +1,4 @@
+#define CONST1 1.2345//常量
 //返回两个整数间最大的那个。
 int max(int num1, int num2){
 	int result;
@@ -22,8 +23,12 @@ void first_c_program(){
 	printf("%d+%d=%d\n", a, b, a + b);
 	printf("max(a,b)=%d\n",max(a,b));
 
+	const float CONST2 = 2.3456;//常量
+	printf("CONST1=%f\n", CONST1);
+	printf("CONST2=%f\n", CONST2);
+
 	int c, d;
 	printf("Give me the value of c,d seperated with whitespaces:\n");
 	scanf("%d%d", &c, &d);
-	printf("c=%d,d=%d", c, d);
+	printf("c=%d,d=%d\n", c, d);
 }

@@ -10,16 +10,14 @@ stdio: standard input and output */
 #include <stdio.h>
 #include <float.h>
 #include "basis1.h"
-#define CONST1 1.2345//常量
+
 
 int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 {
 	printf("This is a C program.\n");
 	//first_c_program();
 	//var_types();
-	const float CONST2 = 2.3456;
-	printf("CONST1=%f \n", CONST1);
-	printf("CONST2=%f", CONST2);
+	
 	getchar();
 	getchar();
 	return 0;//语句用于表示退出程序。
