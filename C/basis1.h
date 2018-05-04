@@ -1,9 +1,9 @@
-#define CONST1 1.2345//常量
+
 //返回两个整数间最大的那个
 int max(int num1, int num2){
 	int result;
 	if (num1 > num2)
-		result = num1; 
+		result = num1;
 	else result = num2;
 	return result;
 }
@@ -19,11 +19,12 @@ void var_types(){
 	printf("float 最大值: %E\n", FLT_MAX);
 	printf("精度值: %d\n", FLT_DIG);
 }
+#define CONST1 1.2345//常量
 //基本测试。
 void first_c_program(){
 	int a = 1, b = 2;
 	printf("%d+%d=%d\n", a, b, a + b);//输出
-	printf("max(a,b)=%d\n",max(a,b));
+	printf("max(a,b)=%d\n", max(a, b));
 
 	const float CONST2 = 2.3456;//常量
 	printf("CONST1=%f\n", CONST1);
