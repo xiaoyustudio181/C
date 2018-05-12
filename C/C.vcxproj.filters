@@ -20,13 +20,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="basis1.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="array.h">
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="pointer.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basis.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

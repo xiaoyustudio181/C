@@ -9,21 +9,26 @@
 stdio: standard input and output */
 #include <stdio.h>
 #include <float.h>
-#include "basis1.h"
+#include "basis.h"
 #include "array.h"
 #include "pointer.h"
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 {
-	printf("This is a C program.\n");
-	//first_c_program();
-	//var_types();
+	//basis1_output_input_const();
+	//basis2_variable_types();
 
-	//arrays();
+	//array1();
 
-	pointer();
-
+	//pointer1();
+	//pointer2();
+	//pointer3();
+	//pointer4();
+	//pointer5();
+	//pointer6();
+	pointer7();
 
 	getchar();
 	return 0;//语句用于表示退出程序。
 }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
