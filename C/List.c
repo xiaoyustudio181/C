@@ -7,6 +7,8 @@ typedef struct LNode {
 	ElemType data;
 	struct LNode * next;
 } LNode, *LinkList;
+LinkList a;
+LNode* b;
 
 Status GetElem(LinkList list, int i, ElemType* e)
 {

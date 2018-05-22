@@ -1,90 +1,65 @@
 
-void pointer7(){
-	int  var = 3000, *pointer, **ppointer;
-	pointer = &var;
-	ppointer = &pointer;
-	printf("var = %d\n", var);
-	printf("*ptr = %d, %x, %p\n", *pointer,pointer,*pointer);
-	printf("**pptr = %d %x, %p\n", **ppointer,ppointer,**ppointer);
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//指针的指针
+void pointer5(){
+	int  int1 = 100, *p, **pp;
+	p = &int1;
+	pp = &p;
+	printf("int1 => %d, %p\n", int1);
+	printf("*p => %d, %p\n", *p, p);
+	printf("**pp => %d, %p\n", **pp, pp);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void pointer6(){
-	char *names[] = {
-		"Zara Ali",
-		"Hina Ali",
-		"Nuha Ali",
-		"Sara Ali",
-	};
+//字符串数组
+void pointer4(){
+	char *strs[] = {"water","food","glass","mouse"};
 	for (int i = 0; i < 4; i++)
 	{
-		printf("names[%d] = %s\n", i, names[i]);
+		printf("strs[%d] = %s\n", i, strs[i]);
 	}
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void pointer5(){
-	int  arr[] = { 10, 100, 200 };
-	int *pointer[3];
-
-	for (int i = 0; i < 3; i++)
-	{
-		pointer[i] = &arr[i];
-		printf("var[%d] = %d\n", i, *pointer[i]);
-	}
-}
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void pointer4(){
-	int  arr[] = { 10, 100, 200 };
-	int  *pointer;
-	pointer = arr;
-	while (pointer <= &arr[2])
-	{
-		printf("%x ==> %d\n", pointer, *pointer);
-		pointer++;
-	}
-}
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//指针数组
 void pointer3(){
-	int  arr[] = { 10, 100, 200 };
-	int  *pointer;
-	pointer = &arr[2];
-	
-	for (int i = 0; i < 3; i++)
-	{
-		printf("%x ==> %d\n", pointer, *pointer);
-		pointer--;
-	}
-}
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void pointer2(){
-	int  arr[] = { 10, 100, 200 };
-	int  *pointer;
-	pointer = arr;
+	int  ints[] = { 10, 100, 200 };
+	int *p[3];
 
 	for (int i = 0; i < 3; i++)
 	{
-		printf("%x ==> %d\n", pointer, *pointer);
-		pointer++;
+		p[i] = &ints[i];
+		printf("ints[%d] => %d, %p\n", i, *p[i], p[i]);
+	}
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//数组指针
+void pointer2(){
+	int  ints[] = { 10, 100, 200 };
+
+	int  *p = ints;
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d, %x, %p, %d\n", p, p, p, *p);
+		p++;
+	}
+
+	p = &ints[2];
+	while (p>=&ints[0]){
+		printf("%d, %x, %p, %d\n", p, p, p, *p);
+		p--;
 	}
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void pointer1(){
-	int var1;
-	char var2[10];
-	printf("var1 变量的地址： %p\n", &var1);
-	printf("var2 变量的地址： %p\n", &var2);
+	int *int1_p = NULL;//整型指针，在声明时如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值（空指针），假定它不指向任何东西
+	char * str1_p = NULL;
+	short* short1 = NULL;
 
-	//在声明时如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值是一个良好的编程习惯。赋为 NULL 值的指针被称为空指针。
-	//NULL 指针是一个定义在标准库中的值为零的常量。
-	int    *ip = NULL;    //一个整型的指针
-	double *dp = NULL;    //一个 double 型的指针
-	float  *fp = NULL;    //一个浮点型的指针
-	char   *chp = NULL;     //一个字符型的指针
-	//内存地址 0 有特别重要的意义，它表明该指针不指向一个可访问的内存位置。但按照惯例，如果指针包含空值（零值），则假定它不指向任何东西。
+	int int1 = 100;
+	char str1[10] = "hello";
 
-	int  var = 20;
-	int  *ip1 = &var;  //在指针变量中存储 var 的地址
-	printf("%p \n", &var);
-	printf("%p \n", ip1);
-	printf("%d \n", *ip1);//使用指针访问值
+	int1_p = &int1;//赋值地址
+	str1_p = str1;//赋值地址（数组）
+
+	printf("变量 int1 的地址： %p, %p, %d\n", &int1, int1_p, *int1_p);
+	printf("变量 char1 的地址： %p, %p \n", &str1, str1_p);
 }
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++

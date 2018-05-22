@@ -80,6 +80,7 @@
     <ClInclude Include="array.h" />
     <ClInclude Include="basis.h" />
     <ClInclude Include="pointer.h" />
+    <ClInclude Include="struct.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp" />
