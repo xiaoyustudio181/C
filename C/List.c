@@ -6,9 +6,9 @@
 typedef struct LNode {
 	ElemType data;
 	struct LNode * next;
-} LNode, *LinkList;
-LinkList a;
-LNode* b;
+} LNode, *LinkList;//此处意思是：下面两者等价
+//LinkList a;
+//LNode* b;
 
 Status GetElem(LinkList list, int i, ElemType* e)
 {

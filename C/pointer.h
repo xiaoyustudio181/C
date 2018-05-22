@@ -35,7 +35,7 @@ void pointer3(){
 void pointer2(){
 	int  ints[] = { 10, 100, 200 };
 
-	int  *p = ints;
+	int *p = ints;
 	for (int i = 0; i < 3; i++)
 	{
 		printf("%d, %x, %p, %d\n", p, p, p, *p);
@@ -52,7 +52,7 @@ void pointer2(){
 void pointer1(){
 	int *int1_p = NULL;//整型指针，在声明时如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值（空指针），假定它不指向任何东西
 	char * str1_p = NULL;
-	short* short1 = NULL;
+	short* short1_p = NULL;
 
 	int int1 = 100;
 	char str1[10] = "hello";
