@@ -1,39 +1,82 @@
 
-//分配内存空间
+//putchar, getchar
 void basis3(){
-	int int1 = (int)malloc(sizeof(int));//分配内存空间
-}
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//输入
-void basis2(){
-	printf("输入两个数字，程序将求和（以回车或空格分开）\n");
-	int num1, num2;
-	scanf("%d%d", &num1, &num2);
-	printf("%d+%d=%d\n",num1,num2,num1+num2);
+	putchar('a');
+	putchar('\n');
+
+	putchar('b');
+	putchar('\n');
+
+	putchar('\101');//八进制数，十进制的65，是A的ASCII码
+	putchar('\n');
+
+	putchar(66);
+	putchar('\n');
+
+	putchar('\\');
+	putchar('\n');
+
+	printf("输入一个字符：");
+	char a=getchar();
+	printf("你输入的字符是：");
+	putchar(a);
+
 	getchar();
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//基本变量类型、定义、输出
-#define PI2 1.2345//常量
-#define NEWTYPE float
+//scanf
+void basis2(){
+	printf("输入两个数字，以空白符或回车符分隔开。\n");
+	int a, b;
+	scanf("%d%d", &a, &b);
+	printf("a=%d, b=%d", a, b);
+	printf("\n");
+
+	printf("输入两个数字，以英文逗号分隔开。\n");
+	scanf("%d,%d", &a, &b);//输入时，要以完全一样的格式输入
+	printf("a=%d, b=%d",a,b);
+	getchar();
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//定义变量、常量，输出
+#define PI2 1.2345//函数外，定义常量
+#define DECIMAL float//函数外，定义int别名
 void basis1(){
-	const float PI = 3.1415f;//常量
 	int int1 = 10, int2 = 20;
+	typedef int INTEGER;//函数内，定义int别名
+	INTEGER int3 = 30;
+	printf("int1 = %d \n", int1);
+	printf("int2 = %d \n", int2);
+	printf("int3 = %d \n", int3);
+	printf("\n");
+
+	const float PI = 3.1415f;//函数内，定义常量
 	float float1 = 1.23456f;
+	DECIMAL float2 = 3.45678;
 	double double1 = 2.34567;
+	printf("float1 = %f \n", float1);
+	printf("float2 = %f \n", float2);
+	printf("PI = %f \n", PI);
+	printf("PI2 = %f \n", PI2);
+	printf("double1 = %f \n", double1);
+	printf("\n");
+
 	char char1 = 'c';
 	char string1[4] = "abc", string2[] = "hello world";
-	strcpy(string1, "zxy");//重新给字符串赋值
-	bool bool1 = true, bool2 = false;
+	strcpy(string1, "zxy");//给字符串赋值
+	printf("char1 = %c _%d \n", char1,char1);
+	printf("string1 = %s _%d\n", string1);
+	printf("string2 = %s \n", string2);
+	printf("\n");
 
-	typedef int INTEGER;//类型别名
-	INTEGER int3 = 30;
-	NEWTYPE float2 = 3.45678;
+	/*bool bool1 = true, bool2 = false;
+	printf("bool1 = %d \n", bool1);
+	printf("bool2 = %d \n", bool2);*/
+}
 
-	printf("int1=%d, int2=%d, int3=%d \n", int1, int2, int3);
-	printf("float1=%f, float2=%f, double1=%f, PI=%f, PI2=%f \n", float1, float2, double1, PI, PI2);
-	printf("char1=%c (%d), string1=%s (%d), string2=%s \n", char1, char1, string1, string1, string2);
-	printf("bool1=%d, bool2=%d \n",bool1,bool2);
+//回收站
+void bin(){
+	int int1 = (int)malloc(sizeof(int));//分配内存空间
 
 	printf("\n数据类型的存储大小（字节）：\n");
 	printf("char %lu\n", sizeof(char));
