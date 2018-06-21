@@ -1,6 +1,22 @@
 
+
+void str(){
+	char a[7] = { "hello " }, b[] = { "world" };
+	printf("%s", strcat(a,b));
+}
+
+//puts, gets
+void puts_gets(){
+	char str[] = "hello\nworld";
+	puts(str);
+	puts("请输入一个字符串：");
+	gets(str);
+	puts("你输入的字符串是：");
+	puts(str);
+}
+
 //putchar, getchar
-void basis3(){
+void putchar_getchar(){
 	putchar('a');
 	putchar('\n');
 
@@ -25,7 +41,7 @@ void basis3(){
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //scanf
-void basis2(){
+void scanf1(){
 	printf("输入两个数字，以空白符或回车符分隔开。\n");
 	int a, b;
 	scanf("%d%d", &a, &b);
@@ -41,7 +57,7 @@ void basis2(){
 //定义变量、常量，输出
 #define PI2 1.2345//函数外，定义常量
 #define DECIMAL float//函数外，定义int别名
-void basis1(){
+void variables(){
 	int int1 = 10, int2 = 20;
 	typedef int INTEGER;//函数内，定义int别名
 	INTEGER int3 = 30;
