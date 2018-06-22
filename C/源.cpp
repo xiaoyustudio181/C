@@ -15,6 +15,7 @@ stdio: standard input and output */
 #include "array.h"
 #include "pointer.h"
 #include "struct.h"
+//Visual Studio代码格式化热键：Ctrl+K+F
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 {

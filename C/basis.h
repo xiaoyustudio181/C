@@ -1,8 +1,17 @@
 
 
 void str(){
-	char a[7] = { "hello " }, b[] = { "world" };
-	printf("%s", strcat(a,b));
+	char str1[27] = { "Hello world" };
+	char str2[] = { "China" };
+	printf("%s\n", str1);
+	printf("%s\n", strcpy(str1, "People's Republic of "));//×Ö·û´®¸´ÖÆ
+	printf("%s\n", strcat(str1, str2));//×Ö·û´®Á¬½Ó
+	printf("%d, %d, %d, %d\n",
+		strcmp("a","b"),
+		strcmp("b","a"),
+		strcmp("a","a"),
+		strcmp("ab","ba")
+	);//×Ö·û´®±È½Ï
 }
 
 //puts, gets
@@ -79,7 +88,6 @@ void variables(){
 
 	char char1 = 'c';
 	char string1[4] = "abc", string2[] = "hello world";
-	strcpy(string1, "zxy");//¸ø×Ö·û´®¸³Öµ
 	printf("char1 = %c _%d \n", char1,char1);
 	printf("string1 = %s _%d\n", string1);
 	printf("string2 = %s \n", string2);
