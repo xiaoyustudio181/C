@@ -12,6 +12,9 @@ void str(){
 		strcmp("a","a"),
 		strcmp("ab","ba")
 	);//字符串比较
+	printf("length: %d\n", strlen(str2));//字符串长度
+	printf("%s\n",_strlwr(str2));//转换为小写
+	printf("%s\n",_strupr(str2));//转换为大写
 }
 
 //puts, gets

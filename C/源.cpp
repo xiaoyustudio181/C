@@ -19,7 +19,7 @@ stdio: standard input and output */
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 {
-	switch (15)
+	switch (32)
 	{
 	case 11:
 		variables(); break;
@@ -33,7 +33,9 @@ int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行
 		str(); break;
 //数组
 	case 31:
-		array1(); break;
+		define_arr(); break;
+	case 32:
+		arr_element_as_param(); break;
 //结构
 	case 51:
 		struct1(); break;
@@ -50,6 +52,7 @@ int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行
 		pointer5(); break;
 	default:break;
 	}
+	getchar();
 	getchar();
 	return 0;//语句用于表示退出程序。
 }
