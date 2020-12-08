@@ -19,7 +19,7 @@ stdio: standard input and output */
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 int main()//所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 {
-	switch (32)
+	switch (31)
 	{
 	case 11:
 		variables(); break;

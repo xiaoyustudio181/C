@@ -27,9 +27,15 @@ void define_arr(){
 	int ints3[] = { 1, 2, 3, 4, 5 };
 	ints3[4] = 50;
 
+	char c[] = { 'c', ' ', 'p', 'r', 'o', 'g', 'r', 'a', 'm' };
+	char c2[][5] = { { 'B', 'A', 'S', 'I', 'C' }, { 'S', 'K', 'I', 'L', 'L' } };
+	char chars[] = "hello";
+
 	for (int i = 0; i < 5; i++)
 	{
 		printf("ints3[%d] => %d\n", i, ints3[i]);
 	}
+
+	printf("%s",chars);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
